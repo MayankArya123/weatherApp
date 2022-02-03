@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="/style.css"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="">
+        <div class="search_bar_block">
+          <div class="mt-4 mb-1 ml-3">
+            <label for="">
+              <h4>Enter country ,city or address of a place</h4></label
+            >
+          </div>
+          <div class="">
+            <input class="search_bar" type="text" oninput="userPreferences()" />
+            <button class="done" onclick="handleClick()">okay</button>
+          </div>
+        </div>
+
+        <div class="list">
+          <ul class="all_preferences"></ul>
+
+          <div class="weather_details">
+            <div class="">
+              <h2 class="place"></h2>
+              <h6 class="temp"><span class="degree"> </span> ℃</h6>
+
+              <p class="description"></p>
+              <h4 class="temp_max">
+                warmest : <span class="temp_max_value"> </span> ℃
+              </h4>
+
+              <h4 class="temp_min">
+                coolest : <span class="temp_min_value"> </span> ℃
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./weather.js"></script>
+  </body>
+</html>
