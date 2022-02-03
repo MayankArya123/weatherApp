@@ -95,7 +95,7 @@ const userPreferences = () => {
 
 const GeoCode = (address, cb) => {
   const url =
-    "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
+    "https://cors-anywhere.herokuapp.com/https://api.mapbox.com/geocoding/v5/mapbox.places/" +
     address +
     ".json?access_token=pk.eyJ1IjoibWF5YW5rMTI0IiwiYSI6ImNreTlwdXBldjA4aGoyb29jbjd5ZW16cnAifQ.7InN2qkKmpdcSiHYknzJkQ"
 
@@ -163,7 +163,7 @@ const saveToLocalStorage = (place_name) => {
 const GetWeatherData = (lat, lon, place_name) => {
   axios
     .get(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=aa76bfbe6bce3503832cd0a587a29c86&units=metric`
+      `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=aa76bfbe6bce3503832cd0a587a29c86&units=metric`
     )
     .then((result) => {
       console.log("result2", result)
